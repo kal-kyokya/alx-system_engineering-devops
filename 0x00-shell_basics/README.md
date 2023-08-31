@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-Shell Navigation task 30th August
+Script printing absolute path of directory
