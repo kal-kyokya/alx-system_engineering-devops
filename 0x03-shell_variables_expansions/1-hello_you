@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Hello $USER'>1-hello_you
+echo 'Hello $USER'
