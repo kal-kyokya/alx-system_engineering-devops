@@ -1,6 +1,6 @@
 Alea iacta est
 
-Alea iacta est ("The die is cast") is a Latin phrase attributed by Suetonius\n
+Alea iacta est ("The die is cast") is a Latin phrase attributed by Suetonius
 (as iacta alea est) to Julius Caesar on January 10, 49 BC
 as he led his army across the Rubicon river in Northern Italy. With this step,
 he entered Italy at the head of his army in defiance of the Senate and began
@@ -12,5 +12,3 @@ German (Der Würfel ist gefallen), Hungarian (A kocka el van vetve) and many oth
 indicate that events have passed a point of no return.
 
 Read more: https://en.wikipedia.org/wiki/Alea_iacta_est
-julien@ubuntu:/tmp/h$ ./6-third_line 
-Alea iacta est ("The die is cast") is a Latin phrase attributed by Suetonius
