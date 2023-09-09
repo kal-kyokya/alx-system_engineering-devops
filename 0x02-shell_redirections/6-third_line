@@ -1,2 +1,2 @@
 #!/bin/bash
-head -3 iacta | tail -1 iacta > third_line | echo "\n" >> third_line | cat third_line
+head -3 iacta | tail -1
