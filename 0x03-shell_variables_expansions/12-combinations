@@ -1,1 +1,2 @@
- 
+#!/bin/bashecho
+echo {a..z}{a..z} | sed 's/oo//' | tr -s " " "\n"
