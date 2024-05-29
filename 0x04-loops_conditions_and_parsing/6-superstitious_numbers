@@ -4,22 +4,24 @@
 #displays 9 and then bad luck from Japan for the 9th loop iteration.
 #displays 17 and then bad luck from Italy for the 17th loop iteration.
 
-i=0
+i=1
 
-while [ $i -lt 20 ]
+while [ $i -lt 21 ]
 do
 	case $i in
-		3)
+		4)
+		     echo "$i"
 		     echo "bad luck from China"
 		          ;;
-		10)
+		9)
+		     echo "$i"
 		     echo "bad luck from Japan"
 		          ;;
-		16)
-		     echo "bad luck from Italy"
-	     	     	  ;;
+		17)
+		     echo "$i" echo "bad luck from Italy"
+		     ;;
 		*)
-		     echo "Best School"
+		     echo "$i"
 	esac
 	((i++))
 
