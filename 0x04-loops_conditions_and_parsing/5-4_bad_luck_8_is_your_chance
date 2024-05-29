@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-: '
-Prints a string 10 times on string but:
-displays bad luck for the 4th loop iteration
-displays good luck for the 8th loop iteration
-displays Best School for the other iterations
-'
+#Prints a string 10 times on string but:
+#displays bad luck for the 4th loop iteration
+#displays good luck for the 8th loop iteration
+#displays Best School for the other iterations
 
 i=0
 
