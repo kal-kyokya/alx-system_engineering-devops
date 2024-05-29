@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#Implement fizzbuzz as a bash script.
+
+i=0
+
+while [ $i -lt 101 ]
+do
+	if [ $((i % 5)) -eq $((i % 3)) ]; then
+	   if [ $((i % 5)) -eq 0 ]; then
+	   	   echo "FizzBuzz"
+	   fi
+	elif [ $((i % 3)) -eq 0 ]; then
+	   echo "Fizz"
+	elif [ $((i % 5)) -eq 0 ]; then
+	     echo "Buzz"
+	else
+		echo "$i"
+		fi
+	((i++))
+
+done
