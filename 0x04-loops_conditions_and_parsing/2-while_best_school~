@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#Display string on screen 10 times using while loop.
-
-i=0
-while [î -lt 10]
-do
-	echo "Best School"
-done

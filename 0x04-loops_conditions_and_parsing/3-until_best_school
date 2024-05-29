@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Send string to stdout using until loop.
+
+i=0
+
+until [ $i -gt 9 ]
+do
+	echo "Best School"
+	((i++))
+
+done
