@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #Implement fizzbuzz as a bash script.
 
-i=0
+i=1
 
 while [ $i -lt 101 ]
 do
-	if (( i % 5 == 0 && i % 3 == 0 && i > 1 )); then
+	if (( i % 5 == 0 && i % 3 == 0 )); then
 	   	   echo "FizzBuzz"
 	elif [ $((i % 3)) -eq 0 ]; then
 	   echo "Fizz"
@@ -13,7 +13,7 @@ do
 	     echo "Buzz"
 	else
 		echo "$i"
-		fi
+	fi
 	((i++))
 
 done
