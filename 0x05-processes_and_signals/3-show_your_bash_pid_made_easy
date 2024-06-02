@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Sends to STDOUT the PID and process name of any process containing 'bash'
+
+pgrep -l bash
