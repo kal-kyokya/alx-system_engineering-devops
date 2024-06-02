@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Kill a process without using kill or killall commands
 
-pkill -15 "$(4-to_infinity_and_beyond)"
+kill -15 "$(pgrep 07-highl)"
