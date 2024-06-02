@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Terminates a process unstoppably
+
+pkill -f9 7-highlander
