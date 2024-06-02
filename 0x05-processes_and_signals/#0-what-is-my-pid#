@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Sends to STDOUT the PID of the running process
-
-pgreg 0-what-is-my-pid

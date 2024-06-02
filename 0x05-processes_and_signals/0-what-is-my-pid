@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Returns the PID of the running process.
+pid=$(pgrep 0-what-is-my-pid)
+
+echo "$pid"
