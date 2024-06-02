@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Kill a process without using kill or killall commands
 
-pkill -15 "$(pgrep 7-highlander)"
+pkill -f 7-highlander
