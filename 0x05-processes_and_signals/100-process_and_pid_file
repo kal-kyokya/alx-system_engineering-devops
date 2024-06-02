@@ -8,11 +8,11 @@
 touch /var/run/myscript.pid
 if [ -e /var/run/myscript.pid ]; then
 	pid=$(pgrep 100-process_and_pid_file)
-	echo $pid > /var/run/myscript.pid
+	echo "$pid" > /var/run/myscript.pid
 
 fi
 
-while [ 1 ]
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
