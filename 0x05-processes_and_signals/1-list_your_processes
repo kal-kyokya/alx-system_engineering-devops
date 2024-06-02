@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Generates a user-oriented list of all running processes
 
-ps -aux
+ps -auf
