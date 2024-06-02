@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# Finds running processes containing word 'bash'
+# shellcheck disable=SC2009
+
+ps -eH u | grep bash
