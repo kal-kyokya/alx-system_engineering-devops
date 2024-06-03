@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Runs ping command on inpu IP Address
 
-if [ "$1" ]
+if [ -n "$1" ]
 then
 	ping -c 5 "$1"
 else
