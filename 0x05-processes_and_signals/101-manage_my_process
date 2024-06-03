@@ -20,7 +20,7 @@ then
 	pkill -SIGSTOP "$(pgrep -f manage_my_process)"
 	rm /var/run/my_process.pid
 	pkill -SIGCONT "$(pgrep -f manage_my_process)"
-	echo "$(pgrep -f manage_my_process)" > /var/run/my_process.pid
+	pgrep -f manage_my_process > /var/run/my_process.pid
 	echo "manage_my_process restarted"
 else
 	echo "Usage: manage_my_process {start|stop|restart}"
