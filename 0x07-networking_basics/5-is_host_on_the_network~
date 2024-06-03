@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Runs ping command on inpu IP Address
+
+if [ -n $1 ]
+then
+	Usage: 5-is_host_on_the_network {IP_ADDRESS}
+else
+	ping $1
