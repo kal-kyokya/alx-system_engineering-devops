@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Retrieves data from list of string.
-
-for line in /etc/passwd
-do
-    cut -d':' f1, f3, f6
-
-done
