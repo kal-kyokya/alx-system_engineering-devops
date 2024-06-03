@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Runs ping command on inpu IP Address
 
-if [ -n "$1" ]
+if [ -z "$1" ]
 then
-	ping -c 5 "$1"
-else
 	echo "Usage: 5-is_host_on_the_network {IP_ADDRESS}"
+else
+	ping -c 5 "$1"
 
 fi
