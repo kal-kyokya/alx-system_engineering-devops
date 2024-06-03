@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Runs ping command on inpu IP Address
 
-if [ -z $1 ]
+if [ -z "$1" ]
 then
 	Usage: 5-is_host_on_the_network {IP_ADDRESS}
 else
 	i=0
 	while [ i < 5 ]
 	do
-		ping $1
+		ping "$1"
 		((i++))
 
 	done
