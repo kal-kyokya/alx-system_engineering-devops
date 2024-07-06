@@ -14,7 +14,7 @@ Related Topics: DevOps & SysAdmin
 	->	A README.md file, at the root of the folder of the project, is mandatory
 	->	All Bash script files must be executable
 	->	Bash script must pass:
-			Shellcheck (version 0.3.7)
+			shellcheck (version 0.3.7)
 				without any error
 	->	The first line of all Bash scripts should be exactly:
 			#!/usr/bin/env bash

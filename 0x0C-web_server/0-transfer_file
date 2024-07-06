@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Bash script cpying one file from our client to a server
 
 if [ $# -ne 4 ]
