@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Upgrades and Updates ubuntu system
+
+sudo apt-get -y upgrade
+sudo apt-get -y update
