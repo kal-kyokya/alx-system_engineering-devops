@@ -1,27 +1,36 @@
 #!/usr/bin/env bash
-# Installs Nginx with the following configurations:
-#+    Listens on port 80.
+# Redirection 301 moved permanently
 
+CONFIG_FILE="/etc/nginx/sites-enabled/default"
+
+# Update packages
+sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get install -y nginx
 
-mkdir /etc/nginx/html
-echo "Hello World" > /etc/nginx/html/index.html
-echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
+# Create an index.html page
+echo "Dj Dem The 1!" | sudo tee /usr/share/nginx/html/index.html
 
+# Create a 404.html page
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
+
+# update config file to redirect
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
-    root   /etc/nginx/html;
+    root   /usr/share/nginx/html;
     index  index.html index.htm;
-location /redirect_me {
-        return 301 http://www.youtube.com/;
+
+    location /redirect_me {
+        return 301 https://https://github.com/kal-kyokya?tab=repositories;
     }
+
     error_page 404 /404.html;
     location /404 {
-      root /etc/nginx/html;
-      internal;
+        root /usr/share/nginx/html;
+        internal;
     }
-}" > /etc/nginx/sites-enabled/default
+}" | sudo tee $CONFIG_FILE
 
+#Restart Nginx service
 sudo service nginx restart
