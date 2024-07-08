@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 # Create an index.html page
-echo "Dj Dem The 1!" | sudo tee /usr/share/nginx/html/index.html
+echo "Welcome to THE DEM !" | sudo tee /usr/share/nginx/html/index.html
 
 # Create a 404.html page
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
