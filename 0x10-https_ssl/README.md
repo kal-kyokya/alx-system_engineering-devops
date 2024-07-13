@@ -1,5 +1,10 @@
-# REQUIREMENTS
-## GENERAL
+# 0x10. HTTPS SSL
+
+This repository contains the entire file collection generated during careful resolution of the tasks present to the Software Engineering registered students of ALX-Africa.
+
+## REQUIREMENTS
+
+### GENERAL
 
 	->	Allowed editors:
 			vi, vim, emacs
