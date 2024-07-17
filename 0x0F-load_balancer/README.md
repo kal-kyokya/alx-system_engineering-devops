@@ -1,6 +1,6 @@
 # 0x0F. LOAD BALANCER
 
-This repository stores files posted dhuring completion of the Load Balancer Project by ALX-Africa to its Software Engineering Program.
+This repository stores every file posted during completion of the Load Balancer Project by ALX-Africa to its Software Engineering Program.
 
 ## REQUIREMENTS
 
