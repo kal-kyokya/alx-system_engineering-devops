@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bash script setting up a Balancer Loader for server farm
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install haproxy
+
+echo "
+
+frontend kalkyokya.tech
+	 bind *:80
+	 mode http
+	 default_backend baEnd
+
+backend baEnd
+	balance roundrobin
+	server 518768-web-01 54.174.176.79:80 check
+	server 518768-web-02 52.91.134.205:80 check" >> /etc/haproxy/haproxy.cfg
+
+sudo haproxy -f -c /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
