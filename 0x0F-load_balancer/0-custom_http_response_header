@@ -2,9 +2,9 @@
 # Installs Nginx with the following configurations:
 #+    Listens on port 80.
 
-sudo snap install emacs --classic
 
 sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -y nginx
 
 sudo mkdir /etc/nginx/html
