@@ -1,18 +1,36 @@
 #!/usr/bin/env bash
-#Configure Nginx
+# Installs Nginx with the following configurations:
+#+    Listens on port 80.
+
+sudo snap install emacs --classic
 
 sudo apt-get update
 sudo apt-get install -y nginx
 
-echo "Hello world!" | sudo tee /var/www/html/index.html
+sudo mkdir /etc/nginx/html
+echo "Hello World!" > /etc/nginx/html/index.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
-string="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/MutabPato permanent;"
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
 
-sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+    add_header X-Served-By '$HOSTNAME';
 
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+    root   /etc/nginx/html;
+    index  index.html index.htm;
 
-sudo sed -i "server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+    location /redirect_me {
+        return 301 https://www.github.com/kal-kyokya;
+    }
+
+    error_page 404 /404.html;
+
+    location /404 {
+      root /etc/nginx/html;
+      internal;
+    }
+}" > /etc/nginx/sites-available/default
 
 sudo nginx -t
 

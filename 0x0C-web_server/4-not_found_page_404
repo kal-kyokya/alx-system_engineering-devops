@@ -1,36 +1,33 @@
 #!/usr/bin/env bash
-# Redirection 301 moved permanently
+# Installs Nginx with the following configurations:
+#+    Listens on port 80.
 
-CONFIG_FILE="/etc/nginx/sites-enabled/default"
-
-# Update packages
-sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get install -y nginx
 
-# Create an index.html page
-echo "Welcome to THE DEM !" | sudo tee /usr/share/nginx/html/index.html
+sudo mkdir /etc/nginx/html
+echo "Welcome to THE DEM !" > /etc/nginx/html/index.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
-# Create a 404.html page
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
-
-# update config file to redirect
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
-    root   /usr/share/nginx/html;
+
+    root   /etc/nginx/html;
     index  index.html index.htm;
 
     location /redirect_me {
-        return 301 https://https://github.com/kal-kyokya?tab=repositories;
+        return 301 https://www.github.com/kal-kyokya;
     }
 
     error_page 404 /404.html;
-    location /404 {
-        root /usr/share/nginx/html;
-        internal;
-    }
-}" | sudo tee $CONFIG_FILE
 
-#Restart Nginx service
+    location /404 {
+      root /etc/nginx/html;
+      internal;
+    }
+}" > /etc/nginx/sites-available/default
+
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
 sudo service nginx restart
