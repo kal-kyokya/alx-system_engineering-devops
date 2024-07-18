@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 #Nginx likes port 80
-
-# remove default config file
-rm /etc/nginx/sites-enabled/default
-
-# configure nginx to listen on port 80 for all active IPv4 IPs
-ls -n /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# restart nginx
-service nginx restart
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo service nginx enable
+sudo service nginx start
