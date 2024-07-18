@@ -1,5 +1,2 @@
-rm: cannot remove '/etc/nginx/sites-enabled/default': No such file or directory
-ls: cannot access '/etc/nginx/sites-enabled/default': No such file or directory
--rw-r--r-- 1 0 0 357 Jul 17 15:23 /etc/nginx/sites-available/default
- * Restarting nginx nginx
+ * Starting nginx nginx
    ...fail!
