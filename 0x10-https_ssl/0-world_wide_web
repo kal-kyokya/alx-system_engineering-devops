@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Configure my domain zone:
-# www --> 83704-lb-01 54.144.156.21
-# web-01 --> 83704-web-01 100.25.4.119
-# web-02 --> 83704-web-02 52.91.133.57
+# www --> 518768-lb-01 54.236.50.80
+# web-01 --> 518768-web-01 54.174.176.79
+# web-02 --> 518768-web-02 52.91.134.205
 
 # -- To be evaluated --
 # domain_information () {
@@ -31,13 +31,15 @@ runDig () {
     dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v s="$subdomain" 'BEGIN { FS = " " } ; { print "The subdomain " s " is a " $4 " record and points to " $5 }'
 }
 
-if [ $# -eq 1 ]; then
+if [ $# -eq 1 ]
+then
     domain="$1"
     for i in "${subdomains_all[@]}"
     do
 	runDig "$i" "$domain"
     done
-elif [ $# -eq 2 ]; then
+elif [ $# -eq 2 ]
+then
     domain="$1"
     subdomain="$2"
     runDig "$subdomain" "$domain"
