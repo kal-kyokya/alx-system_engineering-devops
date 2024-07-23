@@ -1,18 +1,35 @@
 #!/usr/bin/env bash
 # Commands used to setup Uncomplicated Firewall to allow ssh, https and https
 
+# Execute commands as superuser
 sudo su
+
+# Get any available update or upgrade
 apt-get -y update
 apt-get -y upgrade
+
+# Install 'Uncomplicated Firewall' if not installed
 apt-get install -y ufw
+
+# Stop firewall and check statuses to confirm
 service ufw stop
 service ufw status
 ufw status
+
+# Clear all predefined setting to start afresh
 ufw reset
+
+# Block input traffic by default before selecting chosen few 
 ufw default deny incoming
 ufw default allow outgoing
-fuw allow ssh
+
+# 'Chosen Few'
+ufw allow ssh
 ufw allow http
 ufw allow https
+
+# Relaunch Firewall with updated configurations
 service ufw restart
+
+# Reload ufw
 ufw enable
