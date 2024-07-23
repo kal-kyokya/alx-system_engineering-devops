@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# List of commands run during generation of SSL Certificate
+
+# Run commands as a super user
+sudo su
+cd /
+
+# Get updates and Upgrades before installing certbot (A tool by 'LetsEncrypt' for SSL certs.)
+apt-get -y update; apt-get -y upgrade; apt-get install -y certbot
+
+# Assert the existence of 3 services
+which nginx; echo""; which haproxy; echo ""; which certbot
+
+service certbot status
+ls -ltc
+
+certbot certonly --standalone --preferred-challenges http --http-01-port 80 -d www.kalkyokya.tech
+
+ls etc/letsencrypt/; echo""; ls etc/letsencrypt/live/
+ls etc/letsencrypt/live/www.kalkyokya.tech/; echo""; ll etc/letsencrypt/live/www.kalkyokya.tech/
+
+cat /etc/letsencrypt/live/www.kalkyokya.tech/fullchain.pem /etc/letsencrypt/live/www.kalkyokya.tech/privkey.pem > /etc/letsencrypt/live/www.kalkyokya.tech/pubPrivKeys.pem
+
+ls etc/letsencrypt/live/www.kalkyokya.tech/; echo""; ll etc/letsencrypt/live/www.kalkyokya.tech/
+
+haproxy -c -f etc/haproxy/haproxy.cfg
+
+cat etc/letsencrypt/live/www.kalkyokya.tech/fullchain.pem
+cat etc/letsencrypt/live/www.kalkyokya.tech/privkey.pem
+
+service haproxy status
+systemctl restart haproxy
+
+haproxy -c -f /etc/haproxy/haproxy.cfg
+
+lsof -i :443
+lsof -i :80
+service nginx stop
+lsof -i :80
