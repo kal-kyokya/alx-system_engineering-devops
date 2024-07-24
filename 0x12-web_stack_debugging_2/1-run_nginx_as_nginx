@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-#Run Nginx as Nginx
-
+# fix container:: task 2
+pkill -f apache2
 chmod 644 /etc/nginx/nginx.conf
-sed -Ei 's/\s*#\?*user.*/user nginx;/' /etc/nginx/nginx.conf
-sed -Ei 's/(listen(\[::\]:)?80)/listen 8080/' /etc/nginx/sites-enabled/default
-pkill apache2
-
-# Restart nginx
-service nginx restart
+sed -i "1i user nginx;" /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
+sudo -u nginx service nginx restart
