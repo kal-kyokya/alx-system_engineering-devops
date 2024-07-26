@@ -11,4 +11,5 @@ fi
 
 # Executing the backup creation and compression
 
-mysqldump -u root -p '$1' --all-databases | tar -cvzf "$(date +"%Y-m%-%d").tar.gz" backup.sql
+mysqldump -u root -p '$1' --all-databases > backup.sql
+tar -cvzf "$(date +"%Y-m%-%d").tar.gz" backup.sql
