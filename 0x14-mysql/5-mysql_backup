@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash Script Creating a MySQL Backup and compressing it
+
+# Asserting that the required password is present
+
+if [ $# -ne 2 ]
+then
+    echo "Usage: ./5-mysql_backup <password>"
+    exit 1
+fi
+
+# Executing the backup creation and compression
+
+mysqldump -u root -p '$1' --all-databases | tar -cvzf "$(date +"%Y-m%-%d").tar.gz" backup.sql
