@@ -14,4 +14,6 @@ Let’s practice by exploring the infrastructure side (network, servers, securit
 
 ### GENERAL
 
+	->	In English, write a blog post explaining 'what happens when you type https://www.google.com in your browser and press Enter.'
+	->	Publish the blog post on Medium or LinkedIn; share the URL of the blog post in an answer file
 	->	A README.md file, at the root of the folder of the project, is mandatory
