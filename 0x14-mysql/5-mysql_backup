@@ -3,7 +3,7 @@
 
 # Asserting that the required password is present
 
-if [ $# -ne 2 ]
+if [ $# -ne 1 ]
 then
     echo "Usage: ./5-mysql_backup <password>"
     exit 1
