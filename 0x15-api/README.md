@@ -6,7 +6,7 @@ This repository stores any file needed for completion of the '0x15-api' project 
 
 ### GENERAL
 
-<h5>	Libraries imported in Python files must be organized in alphabetical order.</h5>
+Libraries imported in Python files must be organized in alphabetical order.
 
 But also:
 
