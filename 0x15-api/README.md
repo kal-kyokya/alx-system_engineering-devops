@@ -6,6 +6,8 @@ This repository stores any file needed for completion of the '0x15-api' project 
 
 ### GENERAL
 
+<h5>	->	Libraries imported in Python files must be organized in alphabetical order</h5>
+
 	->	Allowed editors:
 			vi, vim, emacs
 	->	All files will be interpreted/compiled on:
@@ -15,9 +17,6 @@ This repository stores any file needed for completion of the '0x15-api' project 
 	->	All files should end with a new line
 	->	The first line of all files should be exactly:
 			#!/usr/bin/python3
-
-<h5>	->	Libraries imported in Python files must be organized in alphabetical order</h5>
-
 	->	A README.md file, at the root of the folder of the project, is mandatory
 	->	Code written should use:
 			pycodestyle (version 2.8.*)
