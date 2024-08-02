@@ -16,7 +16,7 @@ This repository stores any file needed for completion of the '0x15-api' project 
 	->	The first line of all files should be exactly:
 			#!/usr/bin/python3
 
-	->	Libraries imported in Python files must be organized in alphabetical order
+	->	<h5>Libraries imported in Python files must be organized in alphabetical order</h5>
 
 	->	A README.md file, at the root of the folder of the project, is mandatory
 	->	Code written should use:
