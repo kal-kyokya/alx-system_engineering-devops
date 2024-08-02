@@ -9,6 +9,7 @@ This repository stores any file needed for completion of the '0x15-api' project 
 <h5>	Libraries imported in Python files must be organized in alphabetical order.</h5>
 
 But also:
+
 	->	Allowed editors:
 			vi, vim, emacs
 	->	All files will be interpreted/compiled on:
