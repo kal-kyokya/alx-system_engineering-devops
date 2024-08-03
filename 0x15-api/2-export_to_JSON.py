@@ -56,7 +56,7 @@ else:
     with open(filename, 'w') as jsonfile:
         my_list = []
         for task in user_tasks:
-            my_list.append({"task": f"{task.get('title')}",
-                            "completed": f"{task.get('completed')}",
-                            "username": f"{response.get('username')}"})
+            my_list.append({"task": task.get('title'),
+                            "completed": task.get('completed'),
+                            "username": response.get('username')})
         json.dump({user_id: my_list}, jsonfile)
