@@ -22,13 +22,13 @@ else:
         if data.get('userId') == int(id):
             user_tasks.append(data)
 
-    tasks_done = 0
-    tasks_todo = 0
+    tasks_done = []
+    tasks_todo = []
     for task in user_tasks:
         if task.get('completed'):
-            tasks_done += 1
+            tasks_done.append(task)
         else:
-            tasks_todo += 1
+            tasks_todo.append(task)
 
     resource = 'https://jsonplaceholder.typicode.com/users/'
     url = resource + id
@@ -36,7 +36,7 @@ else:
     user_name = response.get('name')
 
     print("Employee {} is done with tasks({}/{}):".format(
-        user_name, tasks_done, len(user_tasks)))
-    for task in user_tasks:
+        user_name, len(tasks_done), len(user_tasks)))
+    for task in tasks_done:
         print("\t {}".format(
             task.get('title')))
