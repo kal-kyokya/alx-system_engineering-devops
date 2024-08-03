@@ -39,14 +39,14 @@ else:
     filename = "todo_all_employees.json"
     with open(filename, 'w') as jsonfile:
         users = {}
-        user_data = []
 
         for user in users_response:
+            user_data = []
             for task in todo_response:
                 if user.get('id') == task.get('userId'):
                     user_data.append({"username": user.get('username'),
                                       "task": task.get('title'),
                                       "completed": task.get('completed')})
             users[user.get('id')] = user_data
-            json.dump(users, jsonfile)
-            user_data.clear()
+
+        json.dump(users, jsonfile)
