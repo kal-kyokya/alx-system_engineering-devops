@@ -44,9 +44,9 @@ else:
         for user in users_response:
             for task in todo_response:
                 if user.get('id') == task.get('id'):
-                    user_data.append({"task": task.get('title'),
-                                      "completed": task.get('completed'),
-                                      "username": user.get('username')})
+                    user_data.append({"username": user.get('username'),
+                                      "task": task.get('title'),
+                                      "completed": task.get('completed')})
             users[user.get('id')] = user_data
 
         json.dump(users, jsonfile)
