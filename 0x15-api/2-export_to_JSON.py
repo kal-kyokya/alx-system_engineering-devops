@@ -7,16 +7,14 @@
 * Generates a Custom View
 
 * Exports the result in a CSV file ('USER_ID.json') formatted as:
-    { "USER_ID": [{"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"}, {"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"}, ... ]}
-
-* Pretty view:
-    { "USER_ID":
-        [
-            {"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"},
-            {"task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"},
-            ...
-        ]
-    }
+[PS: This is the 'Pretty view', output will be on a single line]
+{ "USER_ID":
+  [
+      {"task": "TITLE", "completed": COMPLETED_STATUS, "username": "USERNAME"},
+      {"task": "TITLE", "completed": COMPLETED_STATUS, "username": "USERNAME"},
+      ...
+  ]
+}
 """
 import json
 import requests
