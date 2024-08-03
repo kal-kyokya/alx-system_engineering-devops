@@ -6,7 +6,7 @@
 * Retrieves associated informations from a web resource
 * Generates a Custom View
 
-* Exports the result in a CSV file ('USER_ID.json') formatted as:
+* Exports the result in a JSON file ('USER_ID.json') formatted as:
 [PS: This is the 'Pretty view', output will be on a single line]
 { "USER_ID":
   [
@@ -22,7 +22,7 @@ import sys
 
 
 if len(sys.argv) != 2:
-    print("Usage: ./1-export_to_csv <user_id>")
+    print("Usage: ./2-export_to_JSON <user_id>")
 else:
     user_id = sys.argv[1]
     resource = "https://jsonplaceholder.typicode.com/todos/"
