@@ -48,5 +48,5 @@ else:
                                       "task": task.get('title'),
                                       "completed": task.get('completed')})
             users[user.get('id')] = user_data
-
-        json.dump(users, jsonfile)
+            json.dump(users, jsonfile)
+            user_data.clear()
