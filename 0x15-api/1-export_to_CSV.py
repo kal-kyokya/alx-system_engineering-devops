@@ -37,17 +37,17 @@ else:
     resource = 'https://jsonplaceholder.typicode.com/users/'
     url = resource + user_id
     response = requests.get(url).json()
-    user_name = response.get('name')
+    name = response.get('name')
 
     print("Employee {} is done with tasks({}/{}):".format(
-        user_name, len(tasks_done), len(user_tasks)))
+        name, len(tasks_done), len(user_tasks)))
     for task in tasks_done:
         print("\t {}".format(
             task.get('title')))
 
     filename = user_id + ".csv"
     with open(filename, 'w', newline='') as csv_file:
-        writer = csv.writer(csv_file)
+        writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
         for task in user_tasks:
             writer.writerow([f"{task.get('userId')}",
                              f"{response.get('username')}",
