@@ -9,9 +9,9 @@
 * Exports the result in a CSV file ('USER_ID.csv') formatted as:
     "USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
 """
+import csv
 import requests
 import sys
-import csv
 
 
 if len(sys.argv) != 2:
@@ -49,5 +49,7 @@ else:
     with open(filename, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         for task in user_tasks:
-            writer.writerow([task.get('userId'), user_name,
-                            task.get('completed'), task.get('title')])
+            writer.writerow([f"{task.get('userId')}",
+                             f"{response.get('username')}",
+                             f"{task.get('completed')}",
+                             f"{task.get('title')}"])
