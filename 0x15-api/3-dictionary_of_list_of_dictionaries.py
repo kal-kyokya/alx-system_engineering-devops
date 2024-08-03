@@ -43,7 +43,7 @@ else:
 
         for user in users_response:
             for task in todo_response:
-                if user.get('id') == task.get('id'):
+                if user.get('id') == task.get('userId'):
                     user_data.append({"username": user.get('username'),
                                       "task": task.get('title'),
                                       "completed": task.get('completed')})
