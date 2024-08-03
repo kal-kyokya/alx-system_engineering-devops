@@ -51,6 +51,3 @@ else:
         for task in user_tasks:
             writer.writerow([task.get('userId'), user_name,
                             task.get('completed'), task.get('title')])
-
-    print(filename)
-    print("USER_ID USERNAME TASK_COMPLETED_STATUS TASK_TITLE")
