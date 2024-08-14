@@ -3,8 +3,8 @@
 '0-gather_data_from_an_API' is a script that:
 * Takes in a cmd line argument,
 * Utilizes it as a 'path parameter'
-* Retrieve information for a resource
-* Generate a Custom View
+* Retrieves information for a resource
+* Generates a Custom View
 """
 import requests
 import sys
