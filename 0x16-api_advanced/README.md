@@ -4,7 +4,7 @@ This directory contains all files files required for completion of this API Proj
 
 ## REQUIREMENTS
 
-###GENERAL
+### GENERAL
 
 	->	Allowed editors:
 			vi, vim, emacs
