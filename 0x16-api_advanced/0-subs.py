@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
     url = subreddit_api + "/about.json"
     header = {"User-Agent": "Mozilla/5.0"}
     print(url)
-    response = requests.get(url, headers=header).json()
+    response = requests.get(url, headers=header, allow_redirects=False).json()
     print(response.status_code)
 
     if response:
