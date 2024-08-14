@@ -14,15 +14,17 @@ def number_of_subscribers(subreddit):
     Return:
         The number of subscribers or 0 if error occur.
     """
+    if subreddit is None or type(subreddit) != str:
+        return 0
     reddit_api = "https://www.reddit.com/r/"
     subreddit_api = reddit_api + subreddit
     url = subreddit_api + "/about.json"
-    header = {"User-Agent": "Mozilla/5.0"}
-    print(url)
-    response = requests.get(url, headers=header, allow_redirects=False).json()
-    print(response.status_code)
+    header = {'User-Agent': 'Mozilla/5.0'}
+    response = requests.get(url, headers=header, allow_redirects=False)
 
-    if response:
-        return response.get("subscribers")
+    if response.status_code == '200':
+        content = response.json()
+        if 'subscribers' in content.get('data'):
+            return content.get('data').get('subscribers')
     else:
         return 0
