@@ -2,6 +2,7 @@
 """
 '1-top_ten' Creates a function that manipulates the Reddit API.
 """
+from redditAuth import auth
 import requests
 
 
@@ -20,12 +21,13 @@ def top_ten(subreddit):
     subreddit_api = reddit_api + subreddit
     url = subreddit_api + "/top.json?limit=10"
     header = {'User-Agent': 'Mozilla/5.0'}
-    response = requests.get(url, headers=header, allow_redirects=False)
+    response = requests.get(url, headers=header,
+                            auth=auth, allow_redirects=False)
 
-    if response.status_code == '200':
+    if response.status_code == 200:
         content = response.json()
         posts_list = content.get('data').get('children')
-        for post in post_lists:
+        for post in posts_list:
             title = post.get('data').get('title')
             print(title)
     else:
