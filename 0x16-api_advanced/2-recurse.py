@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Contains recurse function"""
+from redditAuth import auth
 import requests
 
 
@@ -15,9 +16,10 @@ v1.0.0 (by /u/firdaus_cartoon_jr)"
         "count": count,
         "limit": 100
     }
-    response = requests.get(url, headers=headers, params=params,
+    response = requests.get(url, headers=headers,
+                            auth=auth, params=params,
                             allow_redirects=False)
-    if response.status_code == 404:
+    if response.status_code != 200:
         return None
 
     results = response.json().get("data")
