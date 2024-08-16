@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 """
-'0-subs' define a function that manipulate the 'Reddit API'
+'redditApp'
 """
-from redditAuth import auth
 import requests
+from requests.auth import HTTPBasicAuth
 
+
+with open('my_reddit_id', 'r') as redID:
+    MY_REDDIT_ID = str(redID.read())
+
+with open('secret_k', 'r') as secret:
+    SECRET_KEY = str(secret.read())
+
+auth = HTTPBasicAuth(MY_REDDIT_ID, SECRET_KEY)
 
 def number_of_subscribers(subreddit):
     """Fetches the number of subscribers for any given subreddit.
