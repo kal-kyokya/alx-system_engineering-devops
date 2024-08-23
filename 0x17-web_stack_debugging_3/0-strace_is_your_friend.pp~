@@ -1,3 +1,0 @@
-
-command: 'sed s/phpp/php/g'
-path: 'bin/bash:usr/bin/bash'
