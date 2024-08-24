@@ -22,7 +22,6 @@ This repository is home to all files required for completion of the '0x1A' proje
 ->	All Bash script files must be executable
 ->	Bash script must pass:
 		Shellcheck (version 0.3.7-5)
-		~ubuntu16.04.1 via apt-get
 			Without any error
 ->	The first line of all Bash scripts should be exactly:
 		#!/usr/bin/env bash
