@@ -16,12 +16,13 @@ This repository is home to all files required for completion of the '0x1A' proje
 ### BASH SCRIPTS
 
 ```
-->	All files will be interpreted on Ubuntu:
-		16.04 LTS
+->	All files will be interpreted on:
+		Ubuntu 16.04 LTS
 ->	All files should end with a new line
 ->	All Bash script files must be executable
 ->	Bash script must pass:
-		Shellcheck (version 0.3.7-5~ubuntu16.04.1 via apt-get)
+		Shellcheck (version 0.3.7-5)
+		~ubuntu16.04.1 via apt-get
 			Without any error
 ->	The first line of all Bash scripts should be exactly:
 		#!/usr/bin/env bash
