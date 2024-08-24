@@ -1,6 +1,6 @@
 # 0x1A. Application server
 
-This repository is home to all files required for completion of the '0x1A' project by ALX Africa to its Software Engineering Program.
+This repository is home to all files required for successful completion of the '0x1A' project by ALX Africa to its Software Engineering Program.
 
 ## REQUIREMENTS
 
