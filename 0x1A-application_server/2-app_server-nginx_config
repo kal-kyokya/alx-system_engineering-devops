@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name kalkyokya.tech;
+    server_name 54.174.176.79;
 
     location / {
         proxy_pass http://127.0.0.1:5000;
