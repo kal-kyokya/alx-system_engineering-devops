@@ -1,1 +1,2 @@
+#!/bin/bash
 print('\n'.join([a+b for a in 'abcdefghijklmnopqrstuvwxyz' for b in 'abcdefghijklmnopqrstuvwxyz' if a+b!='oo']))
