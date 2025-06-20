@@ -1,2 +1,8 @@
-#!/bin/bashecho
-echo {a..z}{a..z} | sed 's/oo//' | tr -s " " "\n"
+#!/bin/bash
+# echo {a..z}{a..z} | sed 's/oo//' | tr -s " " "\n"
+
+for i in {a..z}; do
+    for j in {a..z}; do
+    	[ $i$j != oo ] && echo $i$j;
+    done;
+done
